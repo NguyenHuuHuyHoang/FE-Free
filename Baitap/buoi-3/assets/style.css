@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.menu {
+    width: 20%;
+    
+}
+
+.menu-item{
+    background-color: darkblue;
+    margin: 0 auto;
+    list-style: none;
+    margin-top: 2px;
+    text-align: center;
+    padding: 5px;
+    transition: all .5s;
+    width: 80%;
+}
+
+.menu-item:hover, .menu-item.active {
+    margin: 5px;
+    width: 100%;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+}
+
+.menu-link {
+    color: currentColor;
+    text-decoration: none;
+}
+

@@ -1,0 +1,49 @@
+body {
+    background-image: url(./cover-img.jpg);
+    background-size: cover;
+}
+
+.top-img {
+    border-radius: 50%;
+
+}
+.img-container {
+    text-align: center;
+}
+
+.top-title, .bottom-title, .center-text, .center-top{
+    color: white;
+    text-align: center;
+}
+
+.content-center { 
+    border: 3px dotted yellow;
+    background-color: rgba(255,255,255,.5);
+    text-align: center;
+    
+}
+
+.center-text {
+    line-height: 60px;
+    
+}
+
+.center-es6 {
+    color: red;
+    font-weight: 700;
+}
+
+.center-typescript {
+    color: blue;
+    font-weight: 700;
+}
+
+.center-vuejs {
+    color: green;
+    font-weight: 700;
+}
+
+.center-reactjs {
+    color: skyblue;
+    font-weight: 700;
+}
