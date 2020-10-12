@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.item {
+    float: left;
+    width: 20%;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    margin-left:calc(20% /4) ;
+}
+
+.card { 
+    width: 100%;
+}
+
+.card >img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card > h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card > h5 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.card > h5 > span:first-child {
+    text-decoration: line-through;
+    color: black;
+}
+
+.card > h5 > span:last-child {
+    color: black;
+    text-transform: uppercase;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.item > .overlay {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    transition: all 0.5s;
+    opacity: 0;
+    text-align: center;
+    z-index: 100;
+}
+
+.overlay > h4 {
+    color: white;
+    text-transform: uppercase;
+    margin-top: 50%;
+}
+
+.item:hover > .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sale-off {
+    position: absolute;
+    top: 30px;
+    left: -40px;
+    transform: rotate(-45deg);
+    z-index: 50;
+    background-color: red;
+    padding: 5px 30px;
+}
+
+.sale-off > h5 {
+    color: white;
+    text-transform: uppercase;
+}
+
