@@ -19,10 +19,10 @@ ul li {
 
 .item {
     float: left;
-    width: 20%;
+    width: calc(92% / 5);
     border: 1px solid #DDD;
     border-radius: 10px;
-    margin-left:calc(20% /4) ;
+    margin:0 calc(2% / 5) ;
 }
 
 .card { 
