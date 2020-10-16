@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /*
+			position:relative;
+			position:absolute;
+			position: fixed;
+			position:sticky;
+			position:static;
+			
+
+			top , left , right , bottom
+			*/
+      div.container {
+        width: 85%;
+        margin: 0px auto;
+      }
+      ul li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      section.menu {
+        width: 100%;
+        background: #b6b1b1;
+      }
+      ul.mainmenu > li {
+        display: inline-block;
+        position: relative;
+      }
+
+      ul.mainmenu > li > a {
+        display: inline-block;
+        color: white;
+        font-size: 18px;
+        padding: 9px 25px;
+      }
+      ul.mainmenu > li img {
+        display: block;
+        width: 46px;
+        margin: 0 auto;
+      }
+      ul.mainmenu > li:hover ul.submenu {
+        visibility: visible;
+        opacity: 1;
+      }
+      ul.submenu {
+        position: absolute;
+        /* top: 0; */
+        background: black;
+        width: 190px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+      }
+      ul.submenu > li > a {
+        color: white;
+        display: block;
+        padding: 10px 10px;
+      }
+
+      .add-icon {
+        margin-top: 20px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .add-icon::after {
+        content: "";
+        display: block;
+        border-left: 2px solid #455570;
+        width: 2px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      .add-icon::before {
+        content: "";
+        display: block;
+        border-left: 2px solid #455570;
+        width: 2px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @media screen and (max-width: 768px) {
+        ul.mainmenu > li {
+          display: block;
+          text-align: center;
+        }
+        ul.mainmenu > li img {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="container">
+		<div class="add-icon"></div>
+		
+        <ul class="mainmenu">
+          <li>
+            <img
+              src="img/main-menut-icon-1-1fb5f7d8-af7e-4e50-809a-d3b1de092d53.png"
+              alt=""
+            /><a href="">menu1</a>
+            <ul class="submenu">
+              <li><a href="">menucon1</a></li>
+              <li><a href="">menucon2</a></li>
+              <li><a href="">menucon3</a></li>
+              <li><a href="">menucon4</a></li>
+            </ul>
+          </li>
+          <li>
+            <img
+              src="img/main-menut-icon-1-1fb5f7d8-af7e-4e50-809a-d3b1de092d53.png"
+              alt=""
+            /><a href="">menu2</a>
+            <ul class="submenu">
+              <li><a href="">menucon1</a></li>
+              <li><a href="">menucon2</a></li>
+              <li><a href="">menucon3</a></li>
+              <li><a href="">menucon4</a></li>
+            </ul>
+          </li>
+          <li>
+            <img
+              src="img/main-menut-icon-1-1fb5f7d8-af7e-4e50-809a-d3b1de092d53.png"
+              alt=""
+            /><a href="">menu2</a>
+            <ul class="submenu">
+              <li><a href="">menucon1</a></li>
+              <li><a href="">menucon2</a></li>
+              <li><a href="">menucon3</a></li>
+              <li><a href="">menucon4</a></li>
+            </ul>
+          </li>
+          <li>
+            <img
+              src="img/main-menut-icon-1-1fb5f7d8-af7e-4e50-809a-d3b1de092d53.png"
+              alt=""
+            /><a href="">menu2</a>
+            <ul class="submenu">
+              <li><a href="">menucon1</a></li>
+              <li><a href="">menucon2</a></li>
+              <li><a href="">menucon3</a></li>
+              <li><a href="">menucon4</a></li>
+            </ul>
+          </li>
+          <li>
+            <img
+              src="img/main-menut-icon-1-1fb5f7d8-af7e-4e50-809a-d3b1de092d53.png"
+              alt=""
+            /><a href="">menu2</a>
+            <ul class="submenu">
+              <li><a href="">menucon1</a></li>
+              <li><a href="">menucon2</a></li>
+              <li><a href="">menucon3</a></li>
+              <li><a href="">menucon4</a></li>
+            </ul>
+          </li>
+          <li>
+            <img
+              src="img/main-menut-icon-1-1fb5f7d8-af7e-4e50-809a-d3b1de092d53.png"
+              alt=""
+            /><a href="">menu2</a>
+            <ul class="submenu">
+              <li><a href="">menucon1</a></li>
+              <li><a href="">menucon2</a></li>
+              <li><a href="">menucon3</a></li>
+              <li><a href="">menucon4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

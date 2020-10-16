@@ -17,3 +17,8 @@ img {
     height: 100%;
     display: block;
 }
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+}
