@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.item {
+    float: left;
+    width: calc(92% / 4);
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    margin:0 calc(2% / 4) ;
+    margin-bottom: 20px;
+}
+
+
+.card { 
+    width: 100%;
+}
+
+.card >img {
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.card>img:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all .5s;
+}
+
+.card:hover>img:nth-of-type(2) {
+    transition: all .5s;
+}
+
+
+.card > h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card > h5 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.card > h5 > span:first-child {
+    text-decoration: line-through;
+    color: black;
+}
+
+.card > h5 > span:last-child {
+    color: black;
+    text-transform: uppercase;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.item > .overlay {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    transition: all 0.5s;
+    opacity: 0;
+    text-align: center;
+    z-index: 100;
+}
+
+.overlay > h4 {
+    color: white;
+    text-transform: uppercase;
+    margin-top: 50%;
+}
+
+.card:hover>img:nth-of-type(1) {
+    left: 0;
+}
+
+.card:hover>img:nth-of-type(2) {
+    transform: scale(0);
+}
+
+.sale-off {
+    position: absolute;
+    top: 30px;
+    left: -40px;
+    transform: rotate(-45deg);
+    z-index: 50;
+    background-color: red;
+    padding: 5px 30px;
+}
+
+.sale-off > h5 {
+    color: white;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+
+    .item {
+        width: calc(92% / 2);
+        margin:0 calc(2% / 2) ;
+    }
+    
+}
