@@ -18,9 +18,18 @@ img {
     display: block;
 }
 
+button {
+	cursor:pointer;
+}
+
 .container {
     margin: 0 auto;
     width: 85%;
+}
+
+.clear::after {
+  content: '';
+  clear: both;
 }
 
 .col-1 {
