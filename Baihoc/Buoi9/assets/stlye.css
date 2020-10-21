@@ -1,0 +1,102 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../img/pacifico.woff);
+}
+@font-face {
+  font-family: mylastfnt;
+  src: url(../img/ptsans.woff);
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: mylastfnt;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+div.container{
+	width: 85%;
+	margin:  0  auto;
+}
+.col-2{
+	width: 14.66666667%;
+	margin:0 1%;
+	float: left;
+}
+.col-3{
+	width: 23%;
+	margin:0 1%;
+	float: left;
+}
+.col-4{
+	width: 31.33333333%;
+	margin:0 1%;
+	float: left;
+}
+.col-5{
+	width:39.66666667%;
+	margin:0 1%;
+	float: left;
+}
+.col-6{
+	width:48%;
+	margin:0 1%;
+	float: left;
+}
+section.top-menu{
+	width: 100%;
+	background-color: #222222;
+	float: left;
+	padding: 3px 0px;
+}
+span.wl-come{
+	color: #eeeeee;
+	font-weight: 700;
+}
+div.top-menu-left a{
+	color: #7e7e7e;
+}
+.to-left {
+	text-align: right;
+}
+section.menu {
+    width: 100%;
+    float: left;
+}
+ul.submainmenu li{
+	display: inline-block;
+}
+ul.submainmenu li a{
+    color: #dc1f1e;
+    padding: 12px 9px;
+    display: inline-block;
+
+}
+ul.submainmenu li.active{
+	border-bottom: 1px solid #dc1f1e;
+}
+.clear::after {
+	content: '';
+	clear: both;
+}
+
+.test {
+	float: left;
+	width: 400px;
+    background: yellow;
+}
+
+.left {
+display: inline-block;
+}
+
+.right {
+	float: left;
+	width: 50px;
+	height: 50px;
+	
+}
