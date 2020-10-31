@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    
+    
+
+
+
+</body>
+</html>
+<script>
+    const createPyramid = (n) => {
+    let str = "";
+    let space = "";
+    for (let i = 1; i < n; i++) {
+        space = space + "-";
+
+    } 
+    for (let i = 0; i<n; i++) { 
+    //    if (!i) {
+    //        str = str + i + str;
+    //    } else {
+
+    //    }
+        str = str + i + str;
+        window.write(space, str, '</br>');
+        space = space.slice(0,1); 
+
+    }
+
+    }
+
+    createPyramid(5);
+
+</script>
