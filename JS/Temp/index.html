@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-    
-    
-
-
-
-</body>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body></body>
 </html>
 <!-- <script>
     const createPyramid = (n) => {
@@ -41,21 +35,21 @@
 </script> -->
 
 <script>
-    const Car = (arrayAttributes, boxContent) => {
     
-        
+  function Car(arrBoxAttributes, boxContent) {
+    this.arrBoxAttributes;
+    this.boxContent;
+    this.printBox = printBox;
 
-        const print = () => {
-
-        // document.write(`<div style="background-color:${boxAttributes[0]};color:${boxAttributes[1]}">${boxContent}</div>`);
-        // 
-        document.write(`<div>${boxContent}</div>`);
-        
-        }
+    function printBox() {
+      document.write(
+        `<div style="background-color: ${arrBoxAttributes[0]};color: ${arrBoxAttributes[1]}; width: ${arrBoxAttributes[2]};height: ${arrBoxAttributes[3]}">${boxContent}</div>`
+      );
     }
- 
- const car = new Car(["yellow","red","200px","200px"],"car_1"); 
+  }
 
-car.print();
-
-</script>  
+  const car = new Car(["yellow", "red", "200px", "200px"], "car_1");
+  const car2 = new Car(["green", "orange", "100px", "200px"], "car_2");
+  car.printBox();
+  car2.printBox();
+</script>
