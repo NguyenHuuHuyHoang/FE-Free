@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body></body>
+</html>
+<script>
+  
+  // this.box = function () {
+  //   this.attr = "";
+  //   this.text = "";
+  //   this.create = create;
+  //   this.markup = markup;
+
+  //   function create(attr, text) {
+  //     var style = makeup(attr);
+  //     var result = "<div style=" + style + ">" + text + "</div>";
+  //     return result;
+  //   }
+
+  //   function markup(attr) {
+  //     return ("background-color: " + attr[2] +"; color: " + attr[3] + "; width:" + attr[0] + ";height: " + attr[1]); 
+  //   }
+
+  //   var obj = new box()
+  //   //phân ra 2 method, 1 cái tạo ra cái div, 1 cái dùng để style.
+  //   obj.attr = ["200px",'200px', green, blue];
+  //   obj.text = "Hello";
+
+  //   document.write(obj.create(this.attr, this.text));
+  //   console.log(obj);
+  // }
+
+  this.box = function () {
+    this.attr = "";
+    this.text = "";
+    this.create = create;
+    this.markup = markup;
+
+    function create(attr, text) {
+      var style = makeup(attr);
+      var result = "<div style=" + style + ">" + text + "</div>";
+      return result;
+    }
+
+    function markup(attr) {
+      var style = "";
+      style += "width: " + attr[0];
+      style += ";height:" + attr[1];
+      style += ";background-color:" + attr[2];
+      style += ";color: " + attr[3];
+      return style;
+          }
+
+    var obj = new box()
+    //phân ra 2 method, 1 cái tạo ra cái div, 1 cái dùng để style.
+    document.write(obj.create(['200px','200px','yellow','red'],'text-1'));
+  }
+</script>
+ 
