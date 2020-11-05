@@ -28,7 +28,7 @@
 
   //   var obj = new box()
   //   //phân ra 2 method, 1 cái tạo ra cái div, 1 cái dùng để style.
-  //   obj.attr = ["200px",'200px', green, blue];
+  //   obj.attr = ["200px","200px", green, blue];
   //   obj.text = "Hello";
 
   //   document.write(obj.create(this.attr, this.text));
@@ -39,26 +39,26 @@
     this.attr = "";
     this.text = "";
     this.create = create;
-    this.markup = markup;
+    this.makeup = makeup;
 
     function create(attr, text) {
       var style = makeup(attr);
-      var result = "<div style=" + style + ">" + text + "</div>";
+      var result = '<div style="' + style + '">' + text + "</div>";
       return result;
     }
 
-    function markup(attr) {
+    function makeup(attr) {
       var style = "";
       style += "width: " + attr[0];
       style += ";height:" + attr[1];
       style += ";background-color:" + attr[2];
       style += ";color: " + attr[3];
       return style;
-          }
+     }
 
-    var obj = new box()
-    //phân ra 2 method, 1 cái tạo ra cái div, 1 cái dùng để style.
-    document.write(obj.create(['200px','200px','yellow','red'],'text-1'));
   }
+    var obj = new box();
+    //phân ra 2 method, 1 cái tạo ra cái div, 1 cái dùng để style.
+    document.write(obj.create(["200px","200px","yellow","green"],"text-1"));
 </script>
  

@@ -9,22 +9,33 @@
   <body></body>
 </html>
 <script>
-  var student = [
-    "nguyen van a",
-    [10, 9, 8],
-    "nguyen van b",
-    [2, 3, 4],
-    "nguyen van c",
-    [7, 6, 8],
+  var students = [
+    ["nguyen van a", [10, 9, 8]],
+    ["nguyen van b", [2, 3, 4]],
+    ["nguyen van c", [7, 6, 8]],
   ];
 
-  for (let i = 0, j = 1, len = student.length, numberScore = student[j].length; i < len; i += 2, j += 2) {
+  // for (let i = 0, j = 1, len = student.length, numberScore = student[j].length; i <br len; i += 2, j += 2) {
+  //   document.write(
+  //     `Học sinh: ${student[i]} có điểm trung bình là ${
+  //       student[j].reduce((a, b) => {
+  //         return a + b;
+  //       }, 0) / numberScore
+  //     } </br>`
+  //   );
+  // }
+
+  for (let indexStudent in students) {
+    let totalScore = 0;
+    for (let indexScore in students[indexStudent][1]) {
+      totalScore += students[indexStudent][1][indexScore];
+    }
     document.write(
-      `Học sinh: ${student[i]} có điểm trung bình là ${
-        student[j].reduce((a, b) => {
-          return a + b;
-        }, 0) / numberScore
-      } </br>`
+      "Hoc sinh: " +
+        students[indexStudent][0] +
+        " co diem trung binh la: " +
+        totalScore / 3 +
+        "</br>"
     );
   }
 </script>
