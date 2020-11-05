@@ -25,17 +25,26 @@
   //   );
   // }
 
-  for (let indexStudent in students) {
-    let totalScore = 0;
-    for (let indexScore in students[indexStudent][1]) {
-      totalScore += students[indexStudent][1][indexScore];
-    }
-    document.write(
-      "Hoc sinh: " +
-        students[indexStudent][0] +
-        " co diem trung binh la: " +
-        totalScore / 3 +
-        "</br>"
-    );
-  }
+  // for (let indexStudent in students) {
+  //   let totalScore = 0;
+  //   for (let indexScore in students[indexStudent][1]) {
+  //     totalScore += students[indexStudent][1][indexScore];
+  //   }
+  //   document.write(
+  //     "Hoc sinh: " +
+  //       students[indexStudent][0] +
+  //       " co diem trung binh la: " +
+  //       totalScore / 3 +
+  //       "</br>"
+  //   );
+  // }
+
+
+
+  document.write((students.map(item => {
+    return `Hoc sinh ${item[0]} có điểm trung bình là ${item[1].reduce((a,b)=>(a+b))/item[1].length}`
+  })).join("</br>"));
+  
+
+
 </script>
