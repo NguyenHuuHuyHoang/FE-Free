@@ -1,0 +1,7 @@
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        float: left;
+        width: calc(((100% / 12) * #{$i}) - 2%);
+        padding: 0 1%;
+    }
+}

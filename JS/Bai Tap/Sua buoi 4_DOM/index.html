@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>index</title>
+</head>
+<style>
+ 	.color{
+ 		color: red;
+ 	}
+</style>
+<body>
+	 <ul class="menu">
+	 	<li><a href="#"  >menu</a></li>
+	 	<li><a href="#" >menu</a></li>
+	 	<li><a href="#" >menu</a></li>
+	 	<li><a href="#" >menu</a></li>
+	 </ul>
+
+
+</body>
+</html>
+<script>
+		//document.getElementById("demo")
+
+
+		var el_ul =  document.getElementsByClassName("menu")[0];
+		var chil  =  el_ul.children;
+		var leg_li  = chil.length;
+	
+		 for(var i = 0 ; i < leg_li; i++ ){
+		 	 var chil_a = chil[i].children;
+		 	  chil_a[0].onclick = function(){
+		 	  	remoclass();
+		 	  		this.classList.add('color');  // this la doi tuong hien tai laf the a
+		 	  }
+		 }
+	function remoclass(){
+
+		 for(var i = 0 ; i < leg_li; i++ ){
+		 	 var chil_a = chil[i].children;
+		 	  chil_a[0].classList.remove('color');
+		 	  		  // this la doi tuong hien tai laf the a
+		 	  
+		 }
+	}
+</script>

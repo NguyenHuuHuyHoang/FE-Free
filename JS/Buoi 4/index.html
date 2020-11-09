@@ -6,28 +6,64 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/style.css" />
     <style>
-      .active {
+      li.active > a {
         color: red;
       }
     </style>
   </head>
   <body>
     <ul class="menu">
-      <li><a href="#" >menu</a></li>
-      <li><a href="#"  >menu</a></li>
+      <li><a href="#">menu</a></li>
+      <li><a href="#">menu</a></li>
       <li><a href="#">menu</a></li>
       <li><a href="#">menu</a></li>
     </ul>
   </body>
 </html>
 <script>
-listTagA = document.getElementsByTagName("a");
+  const menu = document.getElementsByClassName("menu")[0];
+  const arrLi = menu.children;
+  const lenArrLi = arrLi.length;
+  let indexActiveLi = -1;
+
+  addEventToArrayItem(arrLi, "click", (e) => {
+    removeClassFromArray(arrLi, "active");
+    e.target.parentNode.classList.add("active");
+  });
+
+  function addEventToArrayItem(arr, event, action) {
+    for (i = 0, lenArr = arr.length; i < lenArr; i++) {
+      arr[i].addEventListener(event, (e) => {
+        action(e);
+      });
+    }
+  }
+
+  function removeClassFromArray(arr, className) {
+    for (let i = 0, lenArr = arr.length; i < lenArr; i++) {
+      arr[i].classList.remove(className);
+    }
+  }
+
+    //Return index of item added
+  // function addClassItemInArray(indexItem,array, className) {
+  //   array[indexItem].classList.add(className);
+  //   return indexItem;
+  // }
 
 
-for (i = 0; i < listTagA; i++) {
-listTagA[i].innerHTML = "Hello";
-  
-}
-
+  // for (let i = 0; i < lenArrLi; i++) {
+  //   arrLi[i].addEventListener("click", (e) => {
+  //     if (indexActiveLi === -1) {
+  //       indexActiveLi = i;
+  //     }
+  //     if (indexActiveLi !== -1) {
+  //       arrLi[indexActiveLi].classList.remove("active");
+  //     }
+  //     e.target.parentNode.classList.add("active");
+  //     indexActiveLi = i;
+  //   });
+  // }
 
 </script>
+
