@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+      
+      }
+      .active {
+        display: block;
+      }
+
+
+      .box1 {
+        background-color: black;
+      }
+      .box2 {
+        background-color: green;
+      }
+      .box3 {
+        background-color: yellow;
+      }
+      
+      .slide {
+        display: none;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- <div class="banner">
+        <div class="box box1 active"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+    <button id="prev">PREV</button>
+    <button id="next">NEXT</button> -->
+
+    <div class="slide">
+      <div class="box box1"></div>
+    </div>
+    <div class="slide">
+      <div class="box box2"></div>
+    </div>
+    <div class="slide">
+      <div class="box box3"></div>
+    </div>
+    <button onclick="slidebanner('prev')">prev</button>
+    <button onclick="slidebanner('next')">next</button>
+  </body>
+</html>
+<script>
+  // function getEle(Ele) {
+  //   return document.getElementById(Ele);
+  // }
+
+  // const prevBtn = getEle("prev");
+  // const nextBtn = getEle("next");
+
+  // const listImage = document.getElementsByClassName("banner")[0].children;
+
+
+  // function findIndexActiveObject(arrObjects) {
+  //   for (let i = 0; i < arrObjects.length; i++) {
+  //     console.log(arrObjects[i].classList.contains("active"));
+  //     if (arrObjects[i].classList.contains("active")) return i
+  //   }
+  //   return -1;
+  // }
+
+  // function addActiveToObject (arrObjects, index) {
+  //   console.log(document.querySelector("banner active").classList);
+  //   document.querySelector(".banner .active").classList.remove("active");
+  //   arrObjects[index].classList.add("active");
+  // }
+
+
+  // prevBtn.onclick = function() {
+  //   const indexCurrentActiveObject = findIndexActiveObject(listImage);
+  //   if (findIndexActiveObject(listImage) >= 0) {
+  //     addActiveToObject(listImage,(indexCurrentActiveObject - 1));
+  //   }
+  // }
+
+  // nextBtn.onclick = function() {
+  //   const indexCurrentActiveObject = findIndexActiveObject(listImage);
+  //   if (findIndexActiveObject(listImage) >= 0) {
+  //     addActiveToObject(listImage,(indexCurrentActiveObject + 1));
+  //   }
+  // }
+
+const slide = document.getElementsByClassName("slide");
+
+slide[0].style.display = "block";
+let index = 0;
+
+// function slidebanner(direction) {
+
+//   if (direction === "prev") --index;
+
+//   if (direction === "next") ++index;
+  
+//   const lenSlice = slide.length - 1;
+  
+//   for (let i = 0; i <= lenSlice; i++) {
+//     slide[i].style.display = "none";
+//   }
+
+//   if (index > (lenSlice)) index = 0;
+
+//   if (index < 0) index = lenSlice;
+
+//   slide[index].style.display ="block";
+// }
+
+function slidebanner(direction) {
+  const numberSlide = slide.length - 1;
+
+  slide[index].style.display = "none";
+
+  if (direction === "prev") {
+    index = index === 0 ? numberSlide : --index;
+  }
+
+  if (direction === "next") {
+    index = index === numberSlide ? 0 : ++index;
+  }
+  
+  slide[index].style.display = "block";
+}
+
+
+
+</script>
