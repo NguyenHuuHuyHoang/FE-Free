@@ -28,6 +28,7 @@ ul.menu li a {
     display: block;
     padding: 6px 9px;
     font-size: 19px;
+    color: white;
 }
 /* 
 ul.menu li:hover , li.active {

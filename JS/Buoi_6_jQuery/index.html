@@ -46,28 +46,25 @@
             </ul></li></li>
         </ul>
     </div>
-    
-
-
-
 </body>
 </html>
 <script src="./js/jquery-3.5.1.min.js"></script>
 
 <script>
+    // $("ul.menu li").click(function(event) {
+    //     const child = $(this).children();
+    //     $(child[1]).toggle(600);
+    // })
+
+    let menuIsCollapse = null;
+
     $("ul.menu li").click(function(event) {
         const child = $(this).children();
-        console.log(child);
-        child.toggle();
-       
+        (menuIsCollapse) && 
+        $(menuIsCollapse).is(':visible') && 
+        $(child[1]).is(':hidden') && 
+        $(menuIsCollapse).toggle(600);
+        $(child[1]).toggle(600);
+        menuIsCollapse = $(child[1]);
     })
-    // const listMenu = $(".menu")[0].children;
-    // const legListMenu = listMenu.length;
-
-    // for (let i = 0; i < legListMenu; i++) {
-    //     listMenu[i].addEventListener("click", function(e){
-    //         e.preventDefault();
-    //         e.target.parentNode.classList.toggle("active");
-    //     })
-    // }
 </script>
