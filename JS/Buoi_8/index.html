@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/bootstrap-3.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/Responsive-Mobile-Aware-jQuery-Dropdown-Navigation-Plugin-responsiveNav/css/styles.css">
+    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <style>
+      .box {
+        width: 100%;
+        height: 500px;
+      
+      }
+      .active {
+        display: block;
+      }
+
+
+      .box1 {
+        background-color: black;
+      }
+      .box2 {
+        background-color: green;
+      }
+      .box3 {
+        background-color: yellow;
+      }
+      
+      .slide {
+        display: none;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- <div class="banner">
+        <div class="box box1 active"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+    <button id="prev">PREV</button>
+    <button id="next">NEXT</button> -->
+
+    <!-- <div class="slide">
+      <div class="box box1"></div>
+    </div>
+    <div class="slide">
+      <div class="box box2"></div>
+    </div>
+    <div class="slide">
+      <div class="box box3"></div>
+    </div>
+    <button onclick="slidebanner('prev')">prev</button>
+    <button onclick="slidebanner('next')">next</button> -->
+    <div id="nav">
+      <ul>
+        <li><a href="#"> <a href="https://www.jqueryscript.net/menu/">Menu 1 </a>
+          <ul>
+            <li><a href="#"> Menu 1.1 </a></li>
+            <li><a href="#"> Menu 1.2 </a></li>
+          </ul>
+        </li>
+        <li><a href="#"> Menu 2 </a>
+          <ul>
+            <li><a href="#"> Menu 2.1 </a></li>
+            <li><a href="#"> Menu 2.2 </a></li>
+            <ul>
+              <li><a href="#"> Menu 2.2.1 </a></li>
+              <li><a href="#"> Menu 2.2.2 </a></li>
+            </ul>
+          </ul>
+        </li>
+        <li><a href="#"> Menu 3 </a>
+          <ul>
+            <li><a href="#"> Menu 3.1 </a></li>
+            <li><a href="#"> Menu 3.2 </a></li>
+          </ul>
+        </li>
+        <li><a href="#"> Menu 4 </a>
+          <ul>
+            <li><a href="#"> Menu 4.1 </a></li>
+            <li><a href="#"> Menu 4.2 </a></li>
+          </ul>
+        </li>
+        <li><a href="#"> Menu 5 </a>
+          <ul>
+            <li><a href="#"> Menu 5.1 </a></li>
+            <li><a href="#"> Menu 5.2 </a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+<script src="./assets/js/jquery-3.5.1.min.js"></script>
+<script src="./assets/Responsive-Mobile-Aware-jQuery-Dropdown-Navigation-Plugin-responsiveNav/js/jquery.responsiveNav.js"></script>
+<script src="./assets/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<script src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+  // function getEle(Ele) {
+  //   return document.getElementById(Ele);
+  // }
+
+  // const prevBtn = getEle("prev");
+  // const nextBtn = getEle("next");
+
+  // const listImage = document.getElementsByClassName("banner")[0].children;
+
+
+  // function findIndexActiveObject(arrObjects) {
+  //   for (let i = 0; i < arrObjects.length; i++) {
+  //     console.log(arrObjects[i].classList.contains("active"));
+  //     if (arrObjects[i].classList.contains("active")) return i
+  //   }
+  //   return -1;
+  // }
+
+  // function addActiveToObject (arrObjects, index) {
+  //   console.log(document.querySelector("banner active").classList);
+  //   document.querySelector(".banner .active").classList.remove("active");
+  //   arrObjects[index].classList.add("active");
+  // }
+
+
+  // prevBtn.onclick = function() {
+  //   const indexCurrentActiveObject = findIndexActiveObject(listImage);
+  //   if (findIndexActiveObject(listImage) >= 0) {
+  //     addActiveToObject(listImage,(indexCurrentActiveObject - 1));
+  //   }
+  // }
+
+  // nextBtn.onclick = function() {
+  //   const indexCurrentActiveObject = findIndexActiveObject(listImage);
+  //   if (findIndexActiveObject(listImage) >= 0) {
+  //     addActiveToObject(listImage,(indexCurrentActiveObject + 1));
+  //   }
+  // }
+
+const slide = document.getElementsByClassName("slide");
+
+// slide[0].style.display = "block";
+// let index = 0;
+
+// function slidebanner(direction) {
+
+//   if (direction === "prev") --index;
+
+//   if (direction === "next") ++index;
+  
+//   const lenSlice = slide.length - 1;
+  
+//   for (let i = 0; i <= lenSlice; i++) {
+//     slide[i].style.display = "none";
+//   }
+
+//   if (index > (lenSlice)) index = 0;
+
+//   if (index < 0) index = lenSlice;
+
+//   slide[index].style.display ="block";
+// }
+
+function slidebanner(direction) {
+  const numberSlide = slide.length - 1;
+
+  slide[index].style.display = "none";
+
+  if (direction === "prev") {
+    index = index === 0 ? numberSlide : --index;
+  }
+
+  if (direction === "next") {
+    index = index === numberSlide ? 0 : ++index;
+  }
+  
+  slide[index].style.display = "block";
+}
+
+$(document).ready(function(){
+  $('#nav').responsiveNav({
+    // options here
+  });
+});
+
+$('#nav').responsiveNav({
+
+// auto generate menu handle
+generateMenuHandle: true,
+
+// text for menu handle
+menuHandleText:'Menu',
+
+// generate back links
+generateBackLinks:false,
+
+// text for back links
+backLinkText:'Back',
+
+// generate sub-section links
+generateSubSectionLinks:true,
+subSectionLinkExists:function($a, $ul){
+  return $ul.find('> li > a[href="'+$a.attr('href')+'"]').length;
+},
+
+// go to specific links
+sectionSecondTapGo:true,
+
+// generate "plus" icon or "down" arrow
+generateFocusIcons:true,
+
+// generate "right" icon
+generateGoIcons:true,
+
+// for hover intent
+hoverIntentTime: 400
+
+});
+
+</script>
