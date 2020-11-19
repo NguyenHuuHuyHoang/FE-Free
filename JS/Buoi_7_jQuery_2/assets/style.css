@@ -8,6 +8,17 @@ ul li {
     list-style: none;
 }
 
+a, a:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul.menu a img {
+   display: block;
+   width: 100%;
+
+}
+
 
 div.container {
     width: 85%;
@@ -15,20 +26,24 @@ div.container {
 }
 
 ul.menu {
-    width: 25%;
-    background-color: black;
+    
+    
+
+    
 }
 
 ul.menu li {
-    border-bottom: 1px solid white;
+
     transition: all .5s;
+    display: inline-block;
 }
 
 ul.menu li a {
     display: block;
     padding: 6px 9px;
     font-size: 19px;
-    color: white;
+    text-align: center;
+
 }
 /* 
 ul.menu li:hover , li.active {
