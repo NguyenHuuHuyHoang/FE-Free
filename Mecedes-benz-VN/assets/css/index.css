@@ -1,0 +1,31 @@
+a:hover {
+  text-decoration: none;
+}
+header {
+  background-color: black;
+}
+.logo {
+  padding: 10px 0;
+}
+
+ul.navbar li{
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+ul.navbar li>a{
+  color: white;
+  
+}
+
+.lang {
+  text-align: right;
+}
+.lang>a{
+  color: white;
+}
+
+.logo a>img{
+  display: inline-block;
+  margin-right: 20px;   
+}
